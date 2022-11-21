@@ -18,7 +18,8 @@ acima de 2 anos: Arnold Schwarzenegger.
 import java.util.*;
 
 public class Q01 {
-    static class marombeiro{
+    
+    class marombeiro{
         String nome, tipoTreino, statusCadastro;
         double peso, altura, imc;
         int idade, tempo, dia;
@@ -34,7 +35,7 @@ public class Q01 {
         diames = leia.nextInt();
 
 
-        for(int i=0; i<alunos.length; i++){
+        for(int i=0; i<100; i++){
             alunos[i].statusCadastro = "Sem";
         }
 
@@ -44,7 +45,7 @@ public class Q01 {
             int verificador = 0;
 
             System.out.print("Verificando se o aluno "+choose+" está cadastrado.\n");
-            for (int i=choose; i<alunos.length; i++) {
+            for (int i=choose; i<100; i++) {
                 if (alunos[i].statusCadastro.equals("Sem")){
                     System.out.print("Não existem alunos cadastrados na posição " + i + "! Tente novamente mais tarde.");
                 }else{
@@ -54,7 +55,7 @@ public class Q01 {
             }
 
             while(verificador == 1){
-                for(int i=choose; i< alunos.length; i++){
+                for(int i=choose; i<100; i++){
                     System.out.print("\nNome do aluno "+i+": "+alunos[i].nome+".");
                     System.out.print("\nIdade do aluno "+i+": "+alunos[i].idade+" anos.");
                     System.out.print("\nPeso do aluno "+i+": "+alunos[i].nome+"kg.");
@@ -82,7 +83,7 @@ public class Q01 {
         while(choose == 1){
 
             System.out.print("Verificando cadastros.\n");
-            for (int i=0; i<alunos.length; i++) {
+            for (int i=0; i<100; i++) {
                 if (alunos[i].statusCadastro.equals("Sem")){
                     System.out.print("Posição " + i + " vaga! Vamos cadastrar seu aluno nessa posição.");
                     choose = i;
